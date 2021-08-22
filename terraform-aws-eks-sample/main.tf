@@ -6,3 +6,11 @@ locals {
 provider "aws" {
   region = "ap-northeast-1"
 }
+
+terraform {
+  backend "s3" {
+    bucket = "aws-terraform-k8s-production-ready-study-tfstate"
+    key    = "terraform-aws-eks-sample/terraform.tfstate"
+    region = "ap-northeast-1"
+  }
+}
