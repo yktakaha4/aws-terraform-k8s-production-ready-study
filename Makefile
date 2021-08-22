@@ -10,7 +10,7 @@ SHELL:=/bin/bash
 .PHONY: $(shell egrep -o ^[a-zA-Z_-]+: $(MAKEFILE_LIST) | sed 's/://')
 
 format: ## format
-	terraform fmt
+	terraform fmt -recursive .
 
 help: ## Print this help
 	echo 'Usage: make [target]'

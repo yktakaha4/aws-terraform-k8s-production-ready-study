@@ -1,0 +1,6 @@
+{
+    "terraform-ls.rootModules": [
+        "./example",
+        "./terraform-aws-eks-sample"
+    ]
+}
