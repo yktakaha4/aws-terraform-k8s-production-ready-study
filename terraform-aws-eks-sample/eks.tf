@@ -32,7 +32,7 @@ data "aws_eks_cluster_auth" "cluster" {
 resource "aws_launch_template" "eks_example" {
   network_interfaces {
     security_groups = [
-      module.eks.cluster_primary_security_group.id,
+      module.eks.cluster_primary_security_group_id,
       aws_security_group.node_example.id
     ]
   }
