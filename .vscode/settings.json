@@ -2,5 +2,6 @@
     "terraform-ls.rootModules": [
         "./example",
         "./terraform-aws-eks-sample"
-    ]
+    ],
+    "editor.formatOnSave": true
 }
