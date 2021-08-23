@@ -8,8 +8,10 @@ resource "aws_lb" "example" {
 
 resource "aws_lb_listener" "example" {
   load_balancer_arn = aws_lb.example.arn
-  port              = "80"
-  protocol          = "HTTP"
+  port              = "443"
+  protocol          = "HTTPS"
+  ssl_policy        = "ELBSecurityPolicy-2016-08"
+  certificate_arn   = aws_acm_certificate.example.arn
 
   default_action {
     type             = "forward"
